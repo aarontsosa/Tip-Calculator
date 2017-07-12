@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" />
+    <script src="scripts/main.js"></script>
+    <title>Document</title>
+</head>
+<body>
+     <form> 
+        <div class="form-group">
+            <label> Total? </label>
+            <input type="total" id="total" class="form-control" placeholder="Total Amouont" value="">
+        </div>
+        <div class="form-group">
+            <label> How was the service? </label>
+            <input type="service" id="service" class="form-control" placeholder="Service" value="">
+        </div>
+        <div class="form-group">
+            <label> Amount of people paying(number please) </label>
+            <input type="people" id="people" class="form-control" placeholder="Amount of people paying" value="">
+        </div>
+        <input id="button" type="submit" class="btn btn-default" onclick="tipCal(this.formValueId)">
+        <input type="reset" class="btn btn-default">
+     </form> 
+    <span id="tipCal"></span>
+
+    <script>
+        function tipCal(total, service, people){
+            splitAmount(total, service, people);
+        }
+    </script>
+</body>
+</html>
